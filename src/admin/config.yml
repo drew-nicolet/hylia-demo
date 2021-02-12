@@ -59,14 +59,15 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Internal Reference Number", name: "refNumber", widget: "string"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Banner Image", name: "bannerImage", widget: "image", allow_multiple: false}
       - { label: 'Intro Content', name: 'intro', widget: 'markdown' }
+      - {label: Plant Name, name: plantName, widget: string, hint: "Add the common name of the plant."}
+      - {label: Latin Name, name: plantLatinName, widget: string, hint: "Add the latin name of the plant."}
       - label: "Helpful Resources"
         name: "resources"
         widget: "list"
-        label_singular: "helpful resource"
+        label_singular: "Helpful Resource"
         collapsed: true
         summary: '{{fields.title}} - {{fields.source}} [{{fields.sourceType}}]'
         fields:
@@ -82,11 +83,14 @@ collections:
         name: "propAttempts"
         widget: "list"
         collapsed: true
-        label_singular: "propagation attempt"
+        label_singular: "Propagation Attempt"
         required: false
         summary: '{{fields.quote}} - {{fields.author.name}}'
         fields:
           - {label: "Attempt Heading", name: "attemptHeading", widget: "string"}
+          - {label: "Internal Reference Number", name: "refNumber", widget: "string"}
+          - {label: "USDA Zone", name: "usdaZone", widget: "string"}
+          - {label: "Approximate Location", name: "ApproximateLocation", widget: "string"}
           - { label: 'Attempt Intro Summary', name: 'attemptIntro', widget: 'markdown' }
           - label: "Propagation Type"
             name: "sourceType"
@@ -102,7 +106,7 @@ collections:
             name: "attemptUpdates"
             widget: "list"
             required: false
-            label_singular: "attempt update"
+            label_singular: "Attempt Update"
             collapsed: true
             summary: '{{fields.updateHeading}} - {{fields.updateDate}}'
             fields:
@@ -110,7 +114,7 @@ collections:
               - label: "Date of Update"
                 name: "updateDate"
                 widget: "datetime"
-                date_format: "MM/DD/YY"
+                date_format: "MM/DD/YYYY"
                 time_format: false
                 picker_utc: true
               - label: "Propagation Event"
