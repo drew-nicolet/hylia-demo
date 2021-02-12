@@ -59,13 +59,16 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Internal Reference Number", name: "refNumber", widget: "string"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Banner Image", name: "bannerImage", widget: "image"}
+      - {label: "Banner Image", name: "bannerImage", widget: "image", allow_multiple: false}
       - { label: 'Intro Content', name: 'intro', widget: 'markdown' }
       - label: "Helpful Resources"
         name: "resources"
         widget: "list"
-        summary: '{{fields.quote}} - {{fields.author.name}}'
+        label_singular: "helpful resource"
+        collapsed: true
+        summary: '{{fields.title}} - {{fields.source}} [{{fields.sourceType}}]'
         fields:
           - {label: Source, name: source, widget: string, hint: "Use the channel name, website name or book author name."}
           - {label: Title, name: title, widget: string}
@@ -75,6 +78,54 @@ collections:
             widget: "select"
             options: ["Book", "Article", "Video"]
       - {label: "Prop Attempt Section Lead-In", name: "propAttemptLead", widget: "text", required: false}
+      - label: "Propagation Attempts"
+        name: "propAttempts"
+        widget: "list"
+        collapsed: true
+        label_singular: "propagation attempt"
+        required: false
+        summary: '{{fields.quote}} - {{fields.author.name}}'
+        fields:
+          - {label: "Attempt Heading", name: "attemptHeading", widget: "string"}
+          - { label: 'Attempt Intro Summary', name: 'attemptIntro', widget: 'markdown' }
+          - label: "Propagation Type"
+            name: "sourceType"
+            widget: "select"
+            options: ["Direct Sowing", "Direct Winter Sowing", "Container Winter Sowing", "Grafting", "Rooting Cuttings"]
+          - label: "Material Type"
+            name: "materialType"
+            widget: "select"
+            options: ["Purchased Seeds", "Saved Seeds", "Purchased Cuttings", "Free Cuttings"]
+          - {label: "Source Name", name: "sourceName", widget: "string", required: false}
+          - {label: "Source Link", name: "sourceLink", widget: "string", required: false}
+          - label: "Attempt Updates"
+            name: "attemptUpdates"
+            widget: "list"
+            required: false
+            label_singular: "attempt update"
+            collapsed: true
+            summary: '{{fields.updateHeading}} - {{fields.updateDate}}'
+            fields:
+              - {label: "Update Heading", name: "updateHeading", widget: "string"}
+              - label: "Date of Update"
+                name: "updateDate"
+                widget: "datetime"
+                date_format: "MM/DD/YY"
+                time_format: false
+                picker_utc: true
+              - label: "Propagation Event"
+                name: "propEvent"
+                widget: "select"
+                required: false
+                options: ["Seeds Sown", "Cuttings Taken", "Seeds Germinated", "First True Leaves", "Transplanted Outside", "Potted Up"]
+              - { label: 'Update Summary', name: 'updateSummary', widget: 'markdown' }
+              - label: "Images From Update"
+                name: "updateImages"
+                widget: "image"
+                media_library:
+                  config:
+                    multiple: True
+      - { label: 'Post Summary', name: 'postSummary', widget: 'markdown' }
   - label: "Globals"
     name: "globals"
     files:
