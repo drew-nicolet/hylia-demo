@@ -65,6 +65,8 @@ propAttempts:
         imageGroup:
           - imageObject:
               src: /images/3096.jpg
+              alt: this is some test alt text
+              title: This is an image of Good King Henry growing.
           - imageObject:
               src: /images/8.-insure-better-seedling-survival-by-seeding-into-small-containers-first.jpg
           - imageObject:
@@ -151,6 +153,8 @@ propAttempts:
               src: /images/close-up-of-a-small-seedling.jpg
           - imageObject:
               src: /images/full-panoramic.png
+              alt: This is more alt text for example
+              title: A close up picture of the good king henry near the side of our house.
       - updateDate: 2020-08-20T20:00:21.002Z
         updateHeading: Plants Reach Maturity in First Season and Go To Seed
         updateImages: /images/dscf8761-768x1024.jpg
