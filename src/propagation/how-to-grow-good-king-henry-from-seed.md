@@ -62,6 +62,15 @@ propAttempts:
           Maecenas ut ornare ligula. Phasellus vehicula accumsan accumsan. Etiam dignissim laoreet blandit. Etiam vel felis a ex sodales pretium. Nunc sed ipsum vitae **velit pretium porttitor et non** mi. Ut ac urna ultrices, sodales ante et, commodo sapien. Quisque luctus bibendum nisl, eget placerat libero vestibulum non.
         updateImages: /images/h07-black-caraway-seeds-whole-spice-main.jpg
         updateHeading: Planted the Seeds Directly in the Ground With a Milk-Jug Shelter
+        imageGroup:
+          - imageObject:
+              src: /images/3096.jpg
+              alt: this is some test alt text
+              title: This is an image of Good King Henry growing.
+          - imageObject:
+              src: /images/8.-insure-better-seedling-survival-by-seeding-into-small-containers-first.jpg
+          - imageObject:
+              src: /images/close-up-of-a-small-seedling.jpg
       - updateDate: 2020-03-14T19:48:46.796Z
         updateHeading: First Signs of Germination in the Shelters
         propEvent: Seeds Germinated
@@ -75,6 +84,13 @@ propAttempts:
 
           Maecenas ut ornare ligula. Phasellus vehicula accumsan accumsan. Etiam dignissim laoreet blandit. Etiam vel felis a ex sodales pretium. Nunc sed ipsum vitae velit pretium porttitor et non mi. Ut ac urna ultrices, sodales ante et, commodo sapien.
         updateImages: /images/8.-insure-better-seedling-survival-by-seeding-into-small-containers-first.jpg
+        imageGroup:
+          - imageObject:
+              src: /images/dscf8761-768x1024.jpg
+          - imageObject:
+              src: /images/image.jpg
+          - imageObject:
+              src: /images/h07-black-caraway-seeds-whole-spice-main.jpg
       - updateDate: 2020-03-23T19:53:04.529Z
         updateHeading: First True Leaves Emerging From Seedlings
         propEvent: First True Leaves
@@ -106,6 +122,13 @@ propAttempts:
 
           Maecenas ut ornare ligula. Phasellus vehicula accumsan accumsan. Etiam dignissim laoreet blandit. Etiam *vel felis a ex sodales* pretium. Nunc sed ipsum vitae velit pretium porttitor et non mi. Ut ac urna ultrices, sodales ante et, commodo sapien.
         updateImages: /images/close-up-of-a-small-seedling.jpg
+        imageGroup:
+          - imageObject:
+              src: /images/black-seeds.jpg
+          - imageObject:
+              src: /images/seed-germination.webp
+          - imageObject:
+              src: /images/tomato02.jpg
       - updateDate: 2020-05-16T19:57:55.326Z
         updateHeading: Plants Are More Than a Foot Tall
         updateSummary: >-
@@ -125,6 +148,13 @@ propAttempts:
 
           Sed ac tempus dui. Quisque non accumsan arcu. Vestibulum justo sem, semper eget molestie sit amet, facilisis vel nibh.
         updateImages: /images/3096.jpg
+        imageGroup:
+          - imageObject:
+              src: /images/close-up-of-a-small-seedling.jpg
+          - imageObject:
+              src: /images/full-panoramic.png
+              alt: This is more alt text for example
+              title: A close up picture of the good king henry near the side of our house.
       - updateDate: 2020-08-20T20:00:21.002Z
         updateHeading: Plants Reach Maturity in First Season and Go To Seed
         updateImages: /images/dscf8761-768x1024.jpg
@@ -135,6 +165,9 @@ propAttempts:
 
 
           Donec tincidunt eu lacus ac ultrices. Nunc eget nunc quam. Ut nec faucibus turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at condimentum diam, non pellentesque tellus. Sed ac tempus dui. Quisque non accumsan arcu. Vestibulum justo sem, semper eget molestie sit amet, facilisis vel nibh.
+        imageGroup:
+          - imageObject:
+              src: /images/3096.jpg
     attemptIntro: >-
       Maecenas ut ornare ligula. Phasellus vehicula accumsan accumsan. Etiam
       dignissim laoreet blandit. Etiam vel felis a ex sodales pretium. Nunc sed
