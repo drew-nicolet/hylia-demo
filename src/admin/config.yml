@@ -130,7 +130,7 @@ collections:
                 collapsed: true
                 label_singular: "Image"
                 summary: '{{field.imageObject.title}}'
-                field:
+                fields:
                   - label: "Image"
                     name: "imageObject"
                     widget: "object"
