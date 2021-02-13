@@ -123,12 +123,22 @@ collections:
                 required: false
                 options: ["Seeds Sown", "Cuttings Taken", "Seeds Germinated", "First True Leaves", "Transplanted Outside", "Potted Up"]
               - { label: 'Update Summary', name: 'updateSummary', widget: 'markdown' }
-              - label: "Images From Update"
-                name: "updateImages"
-                widget: "image"
-                media_library:
-                  config:
-                    multiple: True
+              - label: "Images"
+                name: "imageGroup"
+                widget: "list"
+                required: false
+                collapsed: true
+                label_singular: "Image"
+                summary: '{{field.imageObject.title}}'
+                field:
+                  - label: "Image"
+                    name: "imageObject"
+                    widget: "object"
+                    collapsed: true
+                    fields:
+                      - {label: "Image", name: "src", widget: "image"}
+                      - {label: "Alt Text", name: "alt", widget: "string", required: false}
+                      - {label: "Title", name: "title", widget: "string", required: false}
       - { label: 'Post Summary', name: 'postSummary', widget: 'markdown' }
   - label: "Globals"
     name: "globals"
