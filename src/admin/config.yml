@@ -61,7 +61,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Banner Image", name: "bannerImage", widget: "image", allow_multiple: false}
-      - { label: 'Intro Content', name: 'intro', widget: 'markdown' }
+      - { label: "Intro Content", name: "intro", widget: "markdown" }
       - {label: Plant Name, name: plantName, widget: string, hint: "Add the common name of the plant."}
       - {label: Latin Name, name: plantLatinName, widget: string, hint: "Add the latin name of the plant."}
       - label: "Helpful Resources"
@@ -91,7 +91,7 @@ collections:
           - {label: "Internal Reference Number", name: "refNumber", widget: "string"}
           - {label: "USDA Zone", name: "usdaZone", widget: "string"}
           - {label: "Approximate Location", name: "ApproximateLocation", widget: "string"}
-          - { label: 'Attempt Intro Summary', name: 'attemptIntro', widget: 'markdown' }
+          - { label: "Attempt Intro Summary", name: "attemptIntro", widget: "markdown" }
           - label: "Propagation Type"
             name: "sourceType"
             widget: "select"
@@ -122,7 +122,7 @@ collections:
                 widget: "select"
                 required: false
                 options: ["Seeds Sown", "Cuttings Taken", "Seeds Germinated", "First True Leaves", "Transplanted Outside", "Potted Up"]
-              - { label: 'Update Summary', name: 'updateSummary', widget: 'markdown' }
+              - { label: "Update Summary", name: "updateSummary", widget: "markdown" }
               - label: "Images"
                 name: "imageGroup"
                 widget: "list"
@@ -210,6 +210,36 @@ collections:
     preview_path: "{{slug}}"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - { label: 'Content', name: 'intro', widget: 'markdown' }
+      - {label: "Heading Text", name: "cardHeading", widget: "string"}
+      - { label: "Card Content", name: "cardContent", widget: "markdown" }
+      - name: "starRating"
+        label: "Star Rating"
+        widget: "select"
+        required: false
+        options:
+          - { label: "0.5 Stars", value: "0.5"}
+          - { label: "1 Stars", value: "1.0"}
+          - { label: "1.5 Stars", value: "1.5"}
+          - { label: "2 Stars", value: "2.0"}
+          - { label: "2.5 Stars", value: "2.5"}
+          - { label: "3 Stars", value: "3.0"}
+          - { label: "3.5 Stars", value: "3.5"}
+          - { label: "4 Stars", value: "4.0"}
+          - { label: "4.5 Stars", value: "4.5"}
+          - { label: "5 Stars", value: "5"}
+      - label: "Image"
+        name: "cardImage"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Image", name: "src", widget: "image"}
+          - {label: "Alt Text", name: "alt", widget: "string", required: false}
+          - {label: "Title", name: "title", widget: "string", required: false}
+      - label: "Button"
+        name: "cardButton"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Link URL", name: "url", widget: "string"}
+          - {label: "Button Text", name: "buttonText", widget: "string"}
   # Above is the dev section of the config file

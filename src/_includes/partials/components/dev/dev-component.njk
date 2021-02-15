@@ -1,2 +1,22 @@
 {# This is the nunjucks file for the component in development #}
-{{intro | markdownFilter | safe}}
+
+
+<div>
+    {% if mainCard.cardImage %}
+        <img class="" src="{{ mainCard.cardImage.src }}" alt="{{ mainCard.cardImage.alt }}" title="{{ mainCard.cardImage.title }}"/>
+    {% endif %}
+    <h3 class="">{{ mainCard.cardHeading }}</h3>
+    {% if mainCard.starRating %}
+        <div class="">
+
+        </div>
+    {% endif %}
+    <div></div>
+    {{ mainCard.cardContent | markdownFilter | safe }}
+    {% if mainCard.cardButton %}
+        <a href="{{ mainCard.cardButton.url }}">
+            <button class="">{{ mainCard.cardButton.buttonText }}</button>
+        </a>
+    {% endif %}
+
+</div>
