@@ -212,5 +212,4 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - { label: 'Content', name: 'intro', widget: 'markdown' }
-      - {label: "Approximate Location", name: "ApproximateLocation", widget: "string"}
   # Above is the dev section of the config file

@@ -1,0 +1,13 @@
+{# This is the nunjucks file for dev layout; it pulls the component straight away #}
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    
+    {% include "partials/components/intro.njk" %}
+      <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 {{ 'pad-bottom-900' if not site.enableThirdPartyComments }} text-500 ] [ sf-flow ] [ e-content ]">
+        {% include "partials/components/dev/dev-component.njk" %}
+      </div>
+    
+  </main>
+{% endblock %}
