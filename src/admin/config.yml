@@ -129,12 +129,10 @@ collections:
                 required: false
                 collapsed: true
                 label_singular: "Image"
-                summary: '{{field.imageObject.title}}'
                 fields:
                   - label: "Image"
                     name: "imageObject"
                     widget: "object"
-                    collapsed: true
                     fields:
                       - {label: "Image", name: "src", widget: "image"}
                       - {label: "Alt Text", name: "alt", widget: "string", required: false}
@@ -204,3 +202,15 @@ collections:
             name: "fonts"
             widget: "hidden"
             default: { "base": "\"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'\"", "serif": "\"'Lora', serif\""}
+  # Below is the dev section of the config file
+  - name: "dev"
+    label: "Component Dev"
+    folder: "src/dev"
+    slug: "{{slug}}"
+    preview_path: "{{slug}}"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - { label: 'Content', name: 'intro', widget: 'markdown' }
+      - {label: "Approximate Location", name: "ApproximateLocation", widget: "string"}
+  # Above is the dev section of the config file
