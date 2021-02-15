@@ -1,6 +1,5 @@
 {# This is the nunjucks file for the component in development #}
 
-{#
 <div>
     {% if mainCard.cardImage %}
         <img class="" src="{{ mainCard.cardImage.src }}" alt="{{ mainCard.cardImage.alt }}" title="{{ mainCard.cardImage.title }}"/>
@@ -8,7 +7,7 @@
     <h3 class="">{{ mainCard.cardHeading }}</h3>
     {% if mainCard.starRating %}
         <div class="">
-
+            {{ mainCard.starRating | starRatingFilter | safe }}
         </div>
     {% endif %}
     <div></div>
@@ -20,4 +19,3 @@
     {% endif %}
 
 </div>
-#}

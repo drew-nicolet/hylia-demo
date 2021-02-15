@@ -1,13 +1,19 @@
 ---
-title: How to Grow Good King Henry From Seed
-intro: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et *dolore magna aliqua*. Nec sagittis aliquam *malesuada
-  bibendum*. Proin libero nunc consequat interdum varius sit.
+title: Sample Post
+card:
+  cardHeading: Test heading
+  cardContent: >-
+    This is some sample text. Part of it will be **bolded**, while others may be
+    in *italics*.
 
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec sagittis **aliquam malesuada** bibendum. Proin libero nunc consequat interdum varius sit.
-
-
-  Proin libero nunc consequat interdum varius sit:
+    Here is another line, this time with a [hyperlink](google.com).
+  starRating: "2.0"
+  cardImage:
+    src: /images/tomato02.jpg
+    alt: Up close of tomato sapling
+    title: This is the seedling of a tomato plant.
+  cardButton:
+    url: bing.com
+    buttonText: Try Bing?
 ---

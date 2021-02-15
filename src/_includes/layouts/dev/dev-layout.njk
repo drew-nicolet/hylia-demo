@@ -5,6 +5,7 @@
   <main id="main-content" tabindex="-1">
     
     {% include "partials/components/intro.njk" %}
+    {% set mainCard = card %}
       <div class="[ post__body ] [ inner-wrapper ] [ leading-loose pad-top-900 {{ 'pad-bottom-900' if not site.enableThirdPartyComments }} text-500 ] [ sf-flow ] [ e-content ]">
         {% include "partials/components/dev/dev-component.njk" %}
       </div>

@@ -210,36 +210,42 @@ collections:
     preview_path: "{{slug}}"
     create: true
     fields:
-      - {label: "Heading Text", name: "cardHeading", widget: "string"}
-      - { label: "Card Content", name: "cardContent", widget: "markdown" }
-      - name: "starRating"
-        label: "Star Rating"
-        widget: "select"
-        required: false
+      - name: "card"
+        label: "Card"
+        required: true
+        widget: "object"
         options:
-          - { label: "0.5 Stars", value: "0.5"}
-          - { label: "1 Stars", value: "1.0"}
-          - { label: "1.5 Stars", value: "1.5"}
-          - { label: "2 Stars", value: "2.0"}
-          - { label: "2.5 Stars", value: "2.5"}
-          - { label: "3 Stars", value: "3.0"}
-          - { label: "3.5 Stars", value: "3.5"}
-          - { label: "4 Stars", value: "4.0"}
-          - { label: "4.5 Stars", value: "4.5"}
-          - { label: "5 Stars", value: "5"}
-      - label: "Image"
-        name: "cardImage"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Image", name: "src", widget: "image"}
-          - {label: "Alt Text", name: "alt", widget: "string", required: false}
-          - {label: "Title", name: "title", widget: "string", required: false}
-      - label: "Button"
-        name: "cardButton"
-        widget: "object"
-        required: false
-        fields:
-          - {label: "Link URL", name: "url", widget: "string"}
-          - {label: "Button Text", name: "buttonText", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Heading Text", name: "cardHeading", widget: "string"}
+          - { label: "Card Content", name: "cardContent", widget: "markdown" }
+          - name: "starRating"
+            label: "Star Rating"
+            widget: "select"
+            required: false
+            options:
+              - { label: "0.5 Stars", value: "0.5"}
+              - { label: "1 Stars", value: "1.0"}
+              - { label: "1.5 Stars", value: "1.5"}
+              - { label: "2 Stars", value: "2.0"}
+              - { label: "2.5 Stars", value: "2.5"}
+              - { label: "3 Stars", value: "3.0"}
+              - { label: "3.5 Stars", value: "3.5"}
+              - { label: "4 Stars", value: "4.0"}
+              - { label: "4.5 Stars", value: "4.5"}
+              - { label: "5 Stars", value: "5"}
+          - label: "Image"
+            name: "cardImage"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Image", name: "src", widget: "image", required: false}
+              - {label: "Alt Text", name: "alt", widget: "string", required: false}
+              - {label: "Title", name: "title", widget: "string", required: false}
+          - label: "Button"
+            name: "cardButton"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Link URL", name: "url", widget: "string"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
   # Above is the dev section of the config file
