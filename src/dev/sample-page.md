@@ -1,8 +1,7 @@
 ---
 title: Sample Page
 cardsList:
-  - title: Card Number One
-    cardButton:
+  - cardButton:
       url: "#"
       buttonText: Read More
     starRating: "3.5"
@@ -16,8 +15,7 @@ cardsList:
       alt: some alt text
       title: The Title of the Image
     cardHeading: Card Number One
-  - title: Card Number Two
-    cardButton:
+  - cardButton:
       buttonText: Read More
       url: "#"
     starRating: "4.5"
@@ -31,8 +29,7 @@ cardsList:
       "de Finibus Bonorum et Malorum" by **Cicero** are also reproduced in their
       exact original form, accompanied by English versions from the 1914
       translation by H. Rackham.
-  - title: Card Number Three
-    cardButton:
+  - cardButton:
       buttonText: Read More
       url: "#"
     starRating: "1.5"

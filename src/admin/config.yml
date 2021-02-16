@@ -219,7 +219,6 @@ collections:
         max: 5
         required: true
         fields:
-          - {label: "Title", name: "title", widget: "string"}
           - {label: "Heading Text", name: "cardHeading", widget: "string"}
           - { label: "Card Content", name: "cardContent", widget: "markdown" }
           - name: "starRating"
