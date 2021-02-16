@@ -1,0 +1,23 @@
+{# allows for a single card with options for stars, an image, and button #}
+<div>
+    {% if mainCard.cardImage %}
+        <img class="" src="{{ mainCard.cardImage.src }}" alt="{{ mainCard.cardImage.alt }}" title="{{ mainCard.cardImage.title }}"/>
+    {% endif %}
+    <h3 class="">{{ mainCard.cardHeading }}</h3>
+    {% if mainCard.starRating %}
+        {# Passes through as stars, as that's what five-stars is expecting #}
+        {% set stars =  mainCard.starRating %}
+        <div class="star-group">
+            {% include "partials/components/five-stars.njk" %}
+        </div>
+    {% endif %}
+    <div class="main-content">
+        {{ mainCard.cardContent | markdownFilter | safe }}
+    </div>
+    {% if mainCard.cardButton %}
+        <a href="{{ mainCard.cardButton.url }}">
+            <button class="">{{ mainCard.cardButton.buttonText }}</button>
+        </a>
+    {% endif %}
+
+</div>
