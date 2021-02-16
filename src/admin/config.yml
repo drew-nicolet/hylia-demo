@@ -250,6 +250,6 @@ collections:
             widget: "object"
             required: false
             fields:
-              - {label: "Link URL", name: "url", widget: "string"}
-              - {label: "Button Text", name: "buttonText", widget: "string"}
+              - {label: "Link URL", name: "url", widget: "string", required: false}
+              - {label: "Button Text", name: "buttonText", widget: "string", required: false}
   # Above is the dev section of the config file
