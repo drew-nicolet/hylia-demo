@@ -2,8 +2,8 @@
 title: Sample Page
 cardsList:
   - cardButton:
-      url: "#"
-      buttonText: Read More
+      url: ""
+      buttonText: ""
     starRating: "3.5"
     cardContent: It is a long established fact that a reader will be distracted by
       the readable content of a page when looking at its layout. The point of
@@ -18,7 +18,7 @@ cardsList:
   - cardButton:
       buttonText: Read More
       url: "#"
-    starRating: "4.5"
+    starRating: null
     cardImage:
       src: /images/close-up-of-a-small-seedling.jpg
       alt: tomato seedling with first true leaves showing up
@@ -35,9 +35,9 @@ cardsList:
     starRating: "1.5"
     cardHeading: Card Number Three
     cardImage:
-      src: /images/tomato02.jpg
-      alt: more alt text
-      title: Overhead view of tomato seedling with new true leaves.
+      src: ""
+      alt: ""
+      title: ""
     cardContent: There are many **variations of passages** of Lorem Ipsum available,
       but the majority have suffered alteration in some form, by injected
       humour, or *randomised words which* don't look even slightly believable.
