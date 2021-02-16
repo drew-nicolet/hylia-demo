@@ -1,0 +1,9 @@
+{# Puts a list of related cards into a group wrapped by a div #}
+{# Allows for cards to display alongside each other on larger screens #}
+<div class="card-group">
+{% for mainCard in cardsList %}
+
+    {% include "partials/components/main-card.njk" %}
+
+{% endfor %}
+</div>

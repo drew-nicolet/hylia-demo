@@ -1,1 +1,8 @@
 {# This is the nunjucks file for the component in development #}
+<div class="card-group">
+{% for mainCard in cardsList %}
+
+    {% include "partials/components/main-card.njk" %}
+
+{% endfor %}
+</div>
