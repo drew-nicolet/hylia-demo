@@ -8,7 +8,7 @@ card:
 
 
     Here is another line, this time with a [hyperlink](google.com).
-  starRating: "2.0"
+  starRating: "0.5"
   cardImage:
     src: /images/tomato02.jpg
     alt: Up close of tomato sapling

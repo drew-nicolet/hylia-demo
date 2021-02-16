@@ -6,7 +6,6 @@ const fs = require('fs');
 const dateFilter = require('./src/filters/date-filter.js');
 const markdownFilter = require('./src/filters/markdown-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
-const starRatingFilter = require('./src/filters/star-rating-filter.js');
 
 // Import transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
@@ -20,7 +19,6 @@ module.exports = function(config) {
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('markdownFilter', markdownFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
-  config.addFilter('starRatingFilter', starRatingFilter);
 
   // Layout aliases
   config.addLayoutAlias('home', 'layouts/home.njk');

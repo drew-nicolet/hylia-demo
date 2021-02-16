@@ -6,12 +6,14 @@
     {% endif %}
     <h3 class="">{{ mainCard.cardHeading }}</h3>
     {% if mainCard.starRating %}
-        <div class="">
-            {{ mainCard.starRating | starRatingFilter | safe }}
+        {% set stars =  mainCard.starRating %}
+        <div class="star-group">
+            {% include "partials/components/five-stars.njk" %}
         </div>
     {% endif %}
-    <div></div>
-    {{ mainCard.cardContent | markdownFilter | safe }}
+    <div class="main-content">
+        {{ mainCard.cardContent | markdownFilter | safe }}
+    </div>
     {% if mainCard.cardButton %}
         <a href="{{ mainCard.cardButton.url }}">
             <button class="">{{ mainCard.cardButton.buttonText }}</button>

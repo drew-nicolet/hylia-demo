@@ -1,0 +1,27 @@
+{# This generates the SVG needed to represent a value like 3.5 stars graphically #}
+{# It allows for half stars; scale from 0.5 stars to 5 stars #}
+
+{# Extracts the qty of each type, also checks for half stars #}
+{% set full = stars | first | int %}
+{% set last = stars | last | int %}
+{% if last == "5" %}
+    {% set half = 1 %}
+{% else %}
+    {% set half = 0 %}
+{% endif %}
+
+{# Calculates the qty of empty stars to add #}
+{% set empty = (5 - full - half) %}
+
+{# Cycles through each svg and adds the correct qty #}
+{% for i in range( 0, full ) %}
+    {% include "icons/star-fill.svg" %}
+{% endfor %}
+
+{% if last == "5" %}
+    {% include "icons/star-half.svg" %}
+{% endif %}
+
+{% for i in range( 0, empty ) %}
+    {% include "icons/star.svg" %}
+{% endfor %}
